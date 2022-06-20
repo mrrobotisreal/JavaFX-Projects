@@ -3,7 +3,7 @@
 
 <?import javafx.scene.control.Button?>
 <FlowPane fx:controller="com.example.learnlayouts.HelloController"
-          xmlns:fx="http://javafx.com/fxml" orientation="HORIZONTAL">
+          xmlns:fx="http://javafx.com/fxml" orientation="VERTICAL">
     <Button text="Button One" />
     <Button text="Button Two" />
     <Button text="Button Three" />
