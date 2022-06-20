@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<!--<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"-->
-<!--      fx:controller="com.example.learnlayouts.HelloController">-->
-<!--    <padding>-->
-<!--        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>-->
-<!--    </padding>-->
-
-<!--    <Label fx:id="welcomeText"/>-->
-<!--    <Button text="Hello!" onAction="#onHelloButtonClick"/>-->
-<!--</VBox>-->
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.HBox?>
+
 <HBox fx:controller="com.example.learnlayouts.HelloController"
       xmlns:fx="http://javafx.com/fxml"
       alignment="BOTTOM_RIGHT"
-      style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed;">
-    <Button text="Okay" />
-    <Button text="Cancel" />
-    <Button text="Help" />
+      style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed;"
+      spacing="10">
+    <padding>
+        <Insets bottom="10" right="10" />
+    </padding>
+    <Button text="Okay" prefWidth="90" />
+    <Button text="Cancel" prefWidth="90" />
+    <Button text="Help" prefWidth="90" />
 </HBox>
