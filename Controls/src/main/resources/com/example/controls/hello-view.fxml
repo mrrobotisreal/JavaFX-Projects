@@ -5,12 +5,39 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.controls.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<GridPane alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.controls.HelloController">
+    <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Say Hello" onAction="#onButtonClicked">
+        <graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif" />
+            </ImageView>
+        </graphic>
+    </Button>
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="1" text="This is a label"
+           textFill="blue" WrapText="true">
+        <font>
+            <Font name="Arial italic" size="12" />
+        </font>
+        <graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/Information24.gif" />
+            </ImageView>
+        </graphic>
+    </Label>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+    <fx:define>
+        <ToggleGroup fx:id="colorToggleGroup" />
+    </fx:define>
+
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="2" text="Red" toggleGroup="$colorToggleGroup" />
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="3" text="Green" toggleGroup="$colorToggleGroup" selected="true" />
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="4" text="Blue" toggleGroup="$colorToggleGroup" />
+</GridPane>
+
